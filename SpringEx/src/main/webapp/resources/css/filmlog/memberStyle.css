@@ -1,0 +1,318 @@
+@charset "UTF-8";
+
+/* 전체 리셋 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgb(66, 66, 66);
+}
+
+ul,ol{
+    list-style: none;
+}
+
+img{
+    vertical-align: top;
+    border: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#wrap{
+    width: 100%;
+    min-width: 1300px;
+}
+
+.header{
+    height: 120px;
+}
+
+
+.headerIn{
+    width: 1300px;
+    margin: 0 auto;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+.logo a{
+    display: block;
+    width: 90px;
+    height: 100px;
+    background-image: url(/resources/img/filmlog/logo.png);
+    background-size: 90px auto;
+    text-indent: -99999px;
+}
+
+.gnb{
+    margin-left: -180px;
+}
+
+.gnb ul{
+    display: flex;
+}
+
+.gnb li{
+    margin-left: 80px;
+}
+
+.gnb li a{
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+.member ul{
+    display: flex;
+}
+
+.member li{
+    margin-left: 20px;
+}
+
+.member li a{
+    font-size: 14px;
+    color: #333;
+}
+
+.member .sc a{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(/resources/img/filmlog/icon_search.png);
+    text-indent: -99999px;
+}
+
+
+.slide{
+    position: relative;
+    height: 320px;
+}
+
+.slide-img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -650px;
+    width: 1300px;
+    height: 250px;
+    background-image: url(/resources/img/filmlog/slide.PNG);
+    text-indent: -999999px;
+}
+
+
+
+/* ----------------------------------------------- */
+.containerIn{
+  width: 900px;
+  margin: 0 auto;
+}
+h1{
+  margin-bottom: 20px;
+  margin-bottom: 50px;
+}
+.text{
+  font-size: 12px;
+  border-bottom: 3px solid #aaa;
+}
+.text p:last-child{
+  margin-bottom: 20px;
+}
+legend{
+  display: none;
+}
+form{
+  text-align: left;
+  margin-bottom: 80px;
+}
+form div{
+  height: 20px;
+  padding: 15px;
+  border-bottom: 1px solid #aaa;
+  display: flex;
+  
+}
+form div input::placeholder{
+  font-size: 10px;
+}
+form label{
+  color: #888;
+  font-size: 16px;
+  font-weight: 500;
+  width: 200px;
+}
+form input{
+  width: 200px;
+  height: 20px;
+  font-size: 12px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+form select{
+  margin-right: 10px;
+}
+span{
+  font-size: 12px;
+}
+select{
+  width: 100px;
+  height: 23px;
+  font-size: 12px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+.sub_btn{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub_btn input{
+  align-items: center;
+  width: 80px;
+  height: 25px;
+  background-color: #888;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.confirmNum, .confirm{
+  height: 22px;
+  font-size: 12px;
+  padding: 2px 5px;
+  background-color: #888;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------- */
+
+
+#footer{
+    background-color: #555;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.footerIn{
+    width: 1300px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.f_logo{
+    width: 140px;
+    height: 35px;
+    background-image: url(/resources/img/filmlog/footer-logo.png);
+    background-size: 140px auto;
+    text-indent: -99999px;
+    margin-right: 80px;
+    margin-left: 20px;
+}
+.f_box{
+    margin-right: 100px;
+}
+
+.f_menu{
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.f_menu ul{
+    display: flex;
+}
+
+.f_menu li{
+    margin-right: 5px;
+}
+
+.f_menu li a{
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #ddd;
+    padding: 3px 15px;
+    font-size: 15px;
+}
+
+.f_info{
+    margin-bottom: 20px;
+    color: #ddd;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.f_info span{
+    margin-right: 13px;
+}
+
+.copyright{
+    color: #ddd;
+    font-weight: 300;
+}
+
+.f_sns{
+    margin-top: 40px;
+}
+
+.f_sns ul{
+    display: flex;
+}
+
+.f_sns li{
+    margin-right: 10px;
+}
+
+.f_sns a{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    text-indent: -99999px;
+
+}
+
+.f_sns .fb a{
+    background-image: url(/resources/img/filmlog/sns_facebook.png);
+}
+
+.f_sns .ins a{
+    background-image: url(/resources/img/filmlog/sns_insta.png);
+}
+
+.f_sns .yt a{
+    background-image: url(/resources/img/filmlog/sns_youtube.png);
+}
