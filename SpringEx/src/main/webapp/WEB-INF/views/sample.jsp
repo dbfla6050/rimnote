@@ -6,15 +6,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="/resources/css/filmlog/board.css">
 	<meta charset="UTF-8">
-	<title>Filmlog</title>
+	<title>Insert title here</title>
 </head>
 <body>
-	<%@ include file="header.jsp" %>
-	
-	
-	
-	<%@ include file="footer.jsp" %>
+sample.jsp실행
+${abcd}
 </body>
 </html>

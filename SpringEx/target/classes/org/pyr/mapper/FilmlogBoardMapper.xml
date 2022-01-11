@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.pyr.mapper.FilmlogBoardMapper">
+
+	<!--  id에 추상메소드명이 들어간다 -->
+  	<insert id="write">
+  		insert into filmlogboard(title,content,writer)
+		values(#{title},#{content},#{writer})
+  	</insert>
+  	
+  	<!-- 데이터베이스에서 데이터를 가지고온다 그리고 FilmlogBoardDTO(모델)에 저장시켜서 이동-->
+  	<select id="list"  resultType="org.pyr.domain.FilmlogBoardDTO">
+  		select * from filmlogboard
+  	</select>
+  	
+  	<select id="detail" resultType="org.pyr.domain.FilmlogBoardDTO">
+  		select * from filmlogboard where bno=#{bno}
+  	</select>
+  	
+  	<update id="modify">
+  		update filmlogboard
+		set title=#{title},
+			content=#{content}
+		where bno=#{bno}
+  	</update>
+  	
+  	<delete id="remove">
+  		delete from filmlogboard
+  		where bno=#{bno}
+  	</delete>
+  	
+  	
+</mapper>

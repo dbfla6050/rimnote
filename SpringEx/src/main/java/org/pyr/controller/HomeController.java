@@ -25,14 +25,16 @@ public class HomeController {
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
-		Date date = new Date();
+		Date date = new Date();   //현재날짜와 시간
+		//날짜 형식을 정해주는 DateFormat클래스
+		//ex) 2021-01-05 or 2021/01/05 or 2021년01월05일
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
+		//date참조변수와 dateFormat참조변수를 결합
 		String formattedDate = dateFormat.format(date);
 		
-		model.addAttribute("serverTime", formattedDate );
+		model.addAttribute("serverTime", formattedDate );  //실질적으로 model이 home.jsp에 관여한다
 		
-		return "home";
+		return "home"; //return의 역할은 home.jsp를 실행하기위해서 필요한것
 	}
 	
 	@RequestMapping(value = "index", method = RequestMethod.GET)

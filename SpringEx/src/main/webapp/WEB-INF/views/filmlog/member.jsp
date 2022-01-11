@@ -6,12 +6,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="/resources/css/filmlog/memberStyle.css">
+	<link rel="stylesheet" type="text/css" href="/resources/css/filmlog/member.css">
 	<meta charset="UTF-8">
 	<title>Filmlog</title>
 </head>
 <body>
-	<%@ include file="header.jsp" %>
+	<%@ include file="board/header.jsp" %>
 
 	 <div id="container">
 	      <div class="containerIn">
@@ -52,7 +52,9 @@
 	        </div>
 	      </div><!--containerIn-->
 	    </div> <!--#container-->
+	    
+	    <%@ include file="board/footer.jsp" %>
     
-    
+    <script src="/resources/js/filmlog/member.js"></script>
 </body>
 </html>
