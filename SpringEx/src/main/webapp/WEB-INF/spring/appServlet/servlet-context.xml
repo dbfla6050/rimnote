@@ -22,7 +22,9 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="org.pyr.controller" />
+	<beans:bean id="multipartResover" class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
 	
+	</beans:bean>
 	
 	
 </beans:beans>

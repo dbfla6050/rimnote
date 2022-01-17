@@ -1,6 +1,9 @@
 package org.pyr.controller;
 
 import org.pyr.domain.FilmlogBoardDTO;
+import org.pyr.domain.FilmlogCriteria;
+import org.pyr.domain.FilmlogPageDTO;
+import org.pyr.domain.PageDTO;
 import org.pyr.service.FilmlogBoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -39,12 +42,16 @@ public class FilmlogController {
 	
 	//게시판 목록리스트(데이터베이스에서 데이터들을 들고와서 게시판목록에 뿌린다)
 	@GetMapping("list")
-	public void list(Model model) {
-		System.out.println("filmlog/board/list");
+	public void list(FilmlogCriteria cri, Model model) {
+		System.out.println("filmlog/board/list="+service.list(cri));
 		//컨트롤러에서 service.list()를 호출하면 bmapper.list()에있는 데이터를 반환한다
 		//model함수를 써서 데이터베이스를 화면에 뿌린다
 		//                  변수이름     데이터
-		model.addAttribute("list", service.list());
+		model.addAttribute("list", service.list(cri));
+		//게시판 페이징에 쓰일 데이터건수
+		int total=service.getTotalCount(cri);
+		//PageDTO의 데이터를 jsp에 뿌린다
+		model.addAttribute("pageMaker",new FilmlogPageDTO(cri,total));
 	}
 	
 	//게시판 목록리스트에서 제목을 클릭하면 상세페이로 이동

@@ -3,7 +3,7 @@
  */
 $(document).ready(function(){
 	var actionForm=$("#actionForm");
-	//현재페이지 번호를 클릭햐면
+	//현재페이지 번호를 클릭하면
 	//form태그 안에 있는 값을 가져와라
 	$(".paginate_button a").on("click",function(e){
 		//a태그눌렀을때 안넘어가게 만듬
@@ -17,6 +17,7 @@ $(document).ready(function(){
 		//form은 submit을 통해서 보내지만 a태그는 submit이 없기때문에 따로 submit을 실행시켜준다
 		actionForm.submit();
 	})
+	
 	//검색을 클릭하면 page가 1로 바뀐다
 	$("input[type='submit']").on("click",function(e){
 		//이 코드를 구현하는데는 필요없음 그러나 혹시 소스볼때나 사용가능
@@ -27,12 +28,9 @@ $(document).ready(function(){
 	})
 	
 	
+	
+	
 })
-
-
-
-
-
 
 
 

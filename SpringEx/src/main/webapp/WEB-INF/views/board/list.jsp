@@ -61,12 +61,13 @@
 						<input type="text" name="keyword" value="${pageMaker.cri.keyword}">
 						<input type="submit" value="검색">
 					</div>
+					
 					<div id="dataTable_paginate" class="dataTables_paginate paging_simple_numbers">
 						<ul class="pagination">
 						
 							<!-- 만약 prev가 true면 띄우고 false면 띄우지마라 -->
 							<c:if test="${pageMaker.prev}">
-								<li class="paginate_button page-item previous" id="dataTable_next">
+								<li class="paginate_button page-item previous" id="dataTable_prev">
 									<!-- startPage에 -1을 시켜주면 앞으로 넘어간다 -->
 									<a href="${pageMaker.startPage-1}" class="page-link">이전</a>
 								</li>

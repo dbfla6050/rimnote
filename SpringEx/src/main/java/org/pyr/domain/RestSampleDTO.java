@@ -6,6 +6,11 @@ public class RestSampleDTO {
 	private String lastName;
 	
 	
+	
+	public RestSampleDTO() {
+		
+	}
+	
 	public RestSampleDTO(int mno, String firstName, String lastName){
 		this.mno=mno;
 		this.firstName=firstName;
